@@ -4,18 +4,26 @@
 
   /*
    * URL de la aplicación (fe_shoten). En local ambos proyectos viven en
-   * C:\WinNMP\WWW\shoten, por eso la ruta relativa. En el hosting se cambia
-   * por el dominio definitivo (p. ej. https://app.shoten.com.ar).
+   * C:\WinNMP\WWW\shoten, por eso la ruta relativa. En producción, mientras
+   * la app no esté publicada, PROD_APP_URL queda vacío y los botones llevan a
+   * la lista de interesados de "Próximamente". Al publicar fe, completar con
+   * el dominio definitivo (p. ej. https://app.shoten.com.ar).
    */
-  var APP_URL = '../fe_shoten';
+  var LOCAL_APP_URL = '../fe_shoten';
+  var PROD_APP_URL = '';
+  var WAITLIST_URL = '/';
   var APP_ROUTES = {
     login: '/login.php',
     register: '/register.php'
   };
 
+  var isLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) || /\.test$/.test(location.hostname);
+  var appUrl = isLocal ? LOCAL_APP_URL : PROD_APP_URL;
+
   document.querySelectorAll('[data-app]').forEach(function (el) {
     var route = APP_ROUTES[el.getAttribute('data-app')];
-    if (route) el.setAttribute('href', APP_URL + route);
+    if (!route) return;
+    el.setAttribute('href', appUrl ? appUrl + route : WAITLIST_URL);
   });
 
   // Header con sombra al scrollear

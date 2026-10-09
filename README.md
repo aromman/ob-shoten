@@ -28,7 +28,8 @@ db/suscriptores.sql     Tabla de interesados
 ## Link a la aplicación
 
 Los botones "Probar gratis" e "Iniciar sesión" usan `data-app="register|login"`.
-La URL base de la app (`fe_shoten`) se configura en `APP_URL` al inicio de `js/main.js`.
+En local apuntan a `../fe_shoten`. En producción, mientras `PROD_APP_URL` (al inicio de `js/main.js`)
+esté vacío, llevan a la lista de interesados de la raíz. Al publicar fe, completarlo con su dominio.
 
 ## Despliegue
 
