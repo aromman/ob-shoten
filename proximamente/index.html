@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shoten | Próximamente</title>
+  <meta name="description" content="Shoten, el software de gestión para librerías. Muy pronto. Dejanos tu email y te avisamos cuando lancemos.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1B2A4A; --ink-soft: #55607A; --paper: #FFF7EC; --paper-2: #F6EBDA;
+      --white: #FFFFFF; --accent: #E4572E; --accent-dark: #C2421D; --green: #2E8B57; --line: #E7DCCB;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased;
+      display: flex; flex-direction: column; overflow-x: hidden;
+    }
+    body::before, body::after {
+      content: ""; position: fixed; border-radius: 50%; pointer-events: none; z-index: -1;
+    }
+    body::before { width: 640px; height: 640px; right: -220px; top: -220px; background: radial-gradient(circle, rgba(228,87,46,.16), transparent 65%); }
+    body::after { width: 560px; height: 560px; left: -200px; bottom: -220px; background: radial-gradient(circle, rgba(46,139,87,.12), transparent 65%); }
+
+    main { flex: 1; display: grid; place-items: center; padding: 48px 16px; }
+    .card { width: 100%; max-width: 620px; text-align: center; }
+    .logo { display: flex; justify-content: center; margin-bottom: 40px; }
+    .logo svg { height: 46px; width: auto; }
+    .tag {
+      display: inline-block; padding: 6px 14px; margin-bottom: 20px; border-radius: 999px;
+      background: var(--white); border: 1px solid var(--line);
+      font-size: .82rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent);
+    }
+    h1 {
+      font-family: "Fraunces", Georgia, serif; font-weight: 700; line-height: 1.1; letter-spacing: -.01em;
+      font-size: clamp(2.2rem, 6vw, 3.6rem); margin: 0 0 18px;
+    }
+    h1 em { color: var(--accent); font-weight: 500; }
+    .lead { font-size: 1.15rem; line-height: 1.6; color: var(--ink-soft); margin: 0 auto 34px; max-width: 520px; }
+
+    form { display: flex; gap: 10px; max-width: 480px; margin: 0 auto; }
+    input[type=email] {
+      flex: 1; min-width: 0; padding: 15px 20px; border-radius: 999px;
+      border: 2px solid var(--line); background: var(--white); color: var(--ink);
+      font: inherit; font-size: 1rem; outline: none; transition: border-color .2s;
+    }
+    input[type=email]:focus { border-color: var(--ink); }
+    button {
+      padding: 15px 26px; border: 0; border-radius: 999px; cursor: pointer;
+      background: var(--accent); color: var(--white); font: inherit; font-weight: 600; font-size: 1rem;
+      box-shadow: 0 8px 20px rgba(228,87,46,.3); transition: background .2s, transform .2s; white-space: nowrap;
+    }
+    button:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    button:disabled { opacity: .7; cursor: wait; transform: none; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .msg { min-height: 1.6em; margin: 16px 0 0; font-weight: 500; }
+    .msg.ok { color: var(--green); }
+    .msg.error { color: var(--accent-dark); }
+    .note { margin-top: 10px; font-size: .85rem; color: var(--ink-soft); }
+
+    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 44px; padding: 0; list-style: none; }
+    .features li { padding: 8px 14px; border-radius: 999px; background: var(--paper-2); font-size: .9rem; font-weight: 500; }
+
+    footer { padding: 24px 16px; text-align: center; font-size: .85rem; color: var(--ink-soft); }
+    footer a { color: inherit; }
+
+    @media (max-width: 520px) {
+      form { flex-direction: column; }
+      .logo { margin-bottom: 28px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <a class="logo" href="./" aria-label="Shoten">
+      <svg viewBox="0 0 168 40" aria-hidden="true">
+        <path d="M4 10c6-3 11-3 16 0v22c-5-3-10-3-16 0z" fill="#E4572E" stroke="#E4572E" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M36 10c-6-3-11-3-16 0v22c5-3 10-3 16 0z" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M24 15h7M24 20h7M24 25h5" stroke="#FFF7EC" stroke-width="1.6" stroke-linecap="round"/>
+        <text x="46" y="28" font-family="Fraunces, Georgia, serif" font-size="25" font-weight="700" fill="#1B2A4A" letter-spacing="-0.5">shoten</text>
+      </svg>
+    </a>
+
+    <span class="tag">Próximamente</span>
+    <h1>El software de gestión <em>para librerías</em> está llegando</h1>
+    <p class="lead">Stock por ISBN, punto de venta, consignaciones con editoriales y factura electrónica, todo en un solo lugar. Dejanos tu email y sé de los primeros en probarlo.</p>
+
+    <form id="suscribir" action="suscribir.php" method="post" novalidate>
+      <label class="hp" aria-hidden="true">No completar <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      <input type="hidden" name="origen" value="proximamente">
+      <input type="email" name="email" placeholder="tu@email.com" autocomplete="email" required aria-label="Tu email">
+      <button type="submit">Avisame</button>
+    </form>
+    <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    <p class="note">Solo te vamos a escribir para avisarte del lanzamiento.</p>
+
+    <ul class="features">
+      <li>📚 Catálogo por ISBN</li>
+      <li>🧾 Factura ARCA</li>
+      <li>🤝 Consignaciones</li>
+      <li>📈 Reportes</li>
+    </ul>
+  </div>
+</main>
+
+<footer>© <span id="year">2026</span> Shoten · <a href="mailto:hola@shoten.com.ar">hola@shoten.com.ar</a></footer>
+
+<script>
+(function () {
+  var form = document.getElementById('suscribir');
+  var msg = document.getElementById('msg');
+  var button = form.querySelector('button');
+  var email = form.querySelector('input[type=email]');
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var show = function (text, ok) {
+    msg.textContent = text;
+    msg.className = 'msg ' + (ok ? 'ok' : 'error');
+  };
+
+  // Resultado cuando el formulario se envió sin JavaScript
+  var estado = new URLSearchParams(location.search).get('estado');
+  if (estado === 'ok') show('¡Listo! Te vamos a avisar cuando lancemos.', true);
+  if (estado === 'error') show('No pudimos registrarte. Revisá el email y probá de nuevo.', false);
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!email.value || !email.checkValidity()) {
+      show('Revisá el email, parece que no es válido.', false);
+      email.focus();
+      return;
+    }
+    button.disabled = true;
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        show(data.mensaje, data.ok);
+        if (data.ok) form.reset();
+      })
+      .catch(function () { show('No pudimos registrarte. Probá de nuevo más tarde.', false); })
+      .then(function () { button.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>

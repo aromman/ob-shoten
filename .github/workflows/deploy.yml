@@ -16,7 +16,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy via FTPS
+      - name: Lint PHP syntax
+        run: |
+          find . -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      # Página "Próximamente" en la raíz del dominio. Al lanzar el sitio se
+      # quita este paso y el de OB pasa a desplegar en la raíz.
+      - name: Deploy "Próximamente" via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./proximamente/
+          server-dir: ${{ vars.FTP_ROOT_DIR || '/public_html/' }}
+          protocol: ftps
+          dangerous-clean-slate: false
+          exclude: |
+            config.example.php
+
+      - name: Deploy OB via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_HOST }}
@@ -30,3 +49,6 @@ jobs:
             **/.git*/**
             **/.github/**
             **/README.md
+            proximamente/**
+            db/**
+            shoten-config/**

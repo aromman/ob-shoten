@@ -1,0 +1,7 @@
+# En desarrollo: el sitio no se indexa en buscadores.
+# Al lanzar, quitar este bloque y el <meta name="robots"> de cada página.
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+Options -Indexes
