@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shoten | Software de gestión para librerías</title>
+  <meta name="description" content="Shoten es el sistema de gestión para librerías: stock por ISBN, punto de venta, consignaciones con editoriales, facturación electrónica ARCA y reportes, todo en una sola plataforma.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================== HEADER ============================== -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="Shoten, inicio">
+      <svg viewBox="0 0 168 40" aria-hidden="true">
+        <path d="M4 10c6-3 11-3 16 0v22c-5-3-10-3-16 0z" fill="#E4572E" stroke="#E4572E" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M36 10c-6-3-11-3-16 0v22c5-3 10-3 16 0z" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M24 15h7M24 20h7M24 25h5" stroke="#FFF7EC" stroke-width="1.6" stroke-linecap="round"/>
+        <text x="46" y="28" font-family="Fraunces, Georgia, serif" font-size="25" font-weight="700" fill="currentColor" letter-spacing="-0.5">shoten</text>
+      </svg>
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <div class="nav__item" data-dropdown>
+        <button class="nav__link" aria-expanded="false">Soluciones
+          <svg class="chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        </button>
+        <div class="dropdown">
+          <a href="index.html#gestion"><span class="ico">📚</span><span><strong>Tu Gestión</strong><small>Catálogo por ISBN, stock multi-sucursal y reportes.</small></span></a>
+          <a href="index.html#ventas"><span class="ico">🧾</span><span><strong>Tus Ventas</strong><small>Punto de venta, cobros y factura electrónica ARCA.</small></span></a>
+          <a href="index.html#editoriales"><span class="ico">🤝</span><span><strong>Tus Editoriales</strong><small>Consignaciones, pedidos, devoluciones y liquidaciones.</small></span></a>
+          <a href="index.html#online"><span class="ico">🛒</span><span><strong>Tu Tienda Online</strong> <span class="badge-new">Pronto</span><small>Vendé tu catálogo en la web con el stock sincronizado.</small></span></a>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="precios.html">Precios</a></div>
+      <div class="nav__item" data-dropdown>
+        <button class="nav__link" aria-expanded="false">Recursos
+          <svg class="chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        </button>
+        <div class="dropdown">
+          <a href="#"><span class="ico">✍️</span><span><strong>Blog</strong><small>Ideas para hacer crecer tu librería.</small></span></a>
+          <a href="#"><span class="ico">🛟</span><span><strong>Centro de Ayuda</strong><small>Guías paso a paso para usar Shoten.</small></span></a>
+          <a href="#"><span class="ico">🎓</span><span><strong>Academia Shoten</strong><small>Capacitaciones para vos y tu equipo.</small></span></a>
+          <a href="index.html#faq"><span class="ico">❓</span><span><strong>Preguntas Frecuentes</strong><small>Respuestas rápidas a las dudas más comunes.</small></span></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header__cta">
+      <a class="link-login" href="#" data-app="login">Iniciar sesión</a>
+      <a class="btn btn--primary btn--sm" href="#" data-app="register">Probar gratis</a>
+    </div>
+
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================== HERO ============================== -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <div class="rating"><span class="stars">★★★★★</span> Hecho por y para libreros</div>
+      <h1>Toda tu librería.<br><span class="text-accent text-italic">Una sola plataforma.</span></h1>
+      <p class="hero__lead">Stock por ISBN, ventas en mostrador, consignaciones con editoriales y facturación electrónica en un solo lugar. Empezás a vender desde el primer día.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#" data-app="register">Probar gratis</a>
+        <a class="btn btn--ghost" href="#como-funciona">Ver cómo funciona</a>
+      </div>
+      <ul class="trust">
+        <li><span class="check">✓</span> Sin tarjeta de crédito</li>
+        <li><span class="check">✓</span> Listo en 15 minutos</li>
+        <li><span class="check">✓</span> Asesoría personalizada</li>
+      </ul>
+    </div>
+
+    <div class="demo" data-demo>
+      <div class="demo__tabs" role="tablist">
+        <button class="demo__tab is-active" role="tab" data-title="shoten · Punto de venta">Venta</button>
+        <button class="demo__tab" role="tab" data-title="shoten · Stock">Stock</button>
+        <button class="demo__tab" role="tab" data-title="shoten · Consignaciones">Consignaciones</button>
+        <button class="demo__tab" role="tab" data-title="shoten · Pedidos a editoriales">Pedidos</button>
+        <button class="demo__tab" role="tab" data-title="shoten · Reportes">Reportes</button>
+      </div>
+
+      <div class="float-card float-card--a"><span class="dot" style="background:#DDF2E5">🧾</span> Factura ARCA emitida</div>
+      <div class="float-card float-card--b"><span class="dot" style="background:var(--accent-soft)">📦</span> Stock bajo: 3 títulos</div>
+
+      <div class="window">
+        <div class="window__bar"><i></i><i></i><i></i><span data-demo-title>shoten · Punto de venta</span></div>
+        <div class="window__body">
+
+          <!-- Venta -->
+          <div class="screen is-active">
+            <div class="mk-head"><h4>Nueva venta · Caja 1</h4><span class="mk-pill mk-pill--green">Turno abierto</span></div>
+            <div class="mk-search">🔎 Escaneá o buscá por ISBN, título o autor…</div>
+            <div class="mk-row"><span class="mk-cover" style="background:#E4572E"></span><span><b>Rayuela</b><small>Julio Cortázar · ISBN 978-950-07-…</small></span><b>$ 18.900</b></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#2E8B57"></span><span><b>Ficciones</b><small>Jorge Luis Borges · x2</small></span><b>$ 31.400</b></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#1B2A4A"></span><span><b>Las aventuras de la China Iron</b><small>Gabriela Cabezón Cámara</small></span><b>$ 21.500</b></div>
+            <div class="mk-total"><span>Total · Débito</span><strong>$ 71.800</strong></div>
+          </div>
+
+          <!-- Stock -->
+          <div class="screen">
+            <div class="mk-head"><h4>Stock por sucursal</h4><span class="mk-pill">3 alertas</span></div>
+            <div class="mk-grid">
+              <div class="mk-kpi"><small>Títulos activos</small><b>12.480</b></div>
+              <div class="mk-kpi"><small>Ejemplares</small><b>38.215</b></div>
+              <div class="mk-kpi"><small>Valor a costo</small><b>$ 96 M</b></div>
+            </div>
+            <div class="mk-row"><span class="mk-cover" style="background:#F2B134"></span><span><b>El Eternauta</b><small>Centro: 2 · Palermo: 0</small></span><span class="mk-pill">Reponer</span></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#34497A"></span><span><b>Cien años de soledad</b><small>Centro: 14 · Palermo: 9</small></span><span class="mk-pill mk-pill--green">OK</span></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#C2421D"></span><span><b>Nuestra parte de noche</b><small>Centro: 1 · Palermo: 1</small></span><span class="mk-pill">Reponer</span></div>
+          </div>
+
+          <!-- Consignaciones -->
+          <div class="screen">
+            <div class="mk-head"><h4>Consignaciones activas</h4><span class="mk-pill mk-pill--ink">Mayo</span></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#E4572E"></span><span><b>Editorial Del Sur</b><small>120 ej. recibidos · 84 vendidos</small><div class="mk-progress"><i style="width:70%"></i></div></span><b>$ 512.000</b></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#2E8B57"></span><span><b>Ediciones Río Manso</b><small>60 ej. recibidos · 21 vendidos</small><div class="mk-progress"><i style="width:35%"></i></div></span><b>$ 148.300</b></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#1B2A4A"></span><span><b>Libros del Faro</b><small>45 ej. recibidos · 40 vendidos</small><div class="mk-progress"><i style="width:89%"></i></div></span><b>$ 296.000</b></div>
+            <div class="mk-total"><span>A liquidar este mes</span><strong>$ 956.300</strong></div>
+          </div>
+
+          <!-- Pedidos -->
+          <div class="screen">
+            <div class="mk-head"><h4>Pedido sugerido · Distribuidora Norte</h4><span class="mk-pill">Borrador</span></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#F2B134"></span><span><b>El Eternauta</b><small>Vendidos 30 días: 18 · Stock: 2</small></span><b>x 15</b></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#C2421D"></span><span><b>Nuestra parte de noche</b><small>Vendidos 30 días: 9 · Stock: 2</small></span><b>x 8</b></div>
+            <div class="mk-row"><span class="mk-cover" style="background:#34497A"></span><span><b>Kentukis</b><small>Vendidos 30 días: 6 · Stock: 1</small></span><b>x 5</b></div>
+            <div class="mk-total"><span>28 ejemplares · enviar por mail</span><strong>$ 412.600</strong></div>
+          </div>
+
+          <!-- Reportes -->
+          <div class="screen">
+            <div class="mk-head"><h4>Ventas de los últimos 6 meses</h4><span class="mk-pill mk-pill--green">+18%</span></div>
+            <div class="mk-grid">
+              <div class="mk-kpi"><small>Ticket promedio</small><b>$ 27.400</b> <em>▲ 6%</em></div>
+              <div class="mk-kpi"><small>Margen bruto</small><b>38%</b> <em>▲ 2 pts</em></div>
+              <div class="mk-kpi"><small>Rotación</small><b>4,1x</b></div>
+            </div>
+            <div class="mk-bars"><span style="height:45%"></span><span style="height:58%"></span><span style="height:52%"></span><span style="height:70%"></span><span style="height:64%"></span><span style="height:88%"></span></div>
+            <div class="mk-labels"><span>Dic</span><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== MARQUEE ============================== -->
+<section class="marquee" aria-label="Para quién es Shoten">
+  <p class="marquee__label">Pensado para todo tipo de librerías</p>
+  <div class="marquee__track">
+    <span class="marquee__item"><span>📖</span>Independientes</span>
+    <span class="marquee__item"><span>🏬</span>Cadenas</span>
+    <span class="marquee__item"><span>🦸</span>Comiquerías</span>
+    <span class="marquee__item"><span>🧸</span>Infantiles</span>
+    <span class="marquee__item"><span>🎓</span>Universitarias</span>
+    <span class="marquee__item"><span>☕</span>Librerías-café</span>
+    <span class="marquee__item"><span>🕰️</span>De usados</span>
+    <span class="marquee__item"><span>🎪</span>Ferias y stands</span>
+    <!-- duplicado para el loop infinito -->
+    <span class="marquee__item" aria-hidden="true"><span>📖</span>Independientes</span>
+    <span class="marquee__item" aria-hidden="true"><span>🏬</span>Cadenas</span>
+    <span class="marquee__item" aria-hidden="true"><span>🦸</span>Comiquerías</span>
+    <span class="marquee__item" aria-hidden="true"><span>🧸</span>Infantiles</span>
+    <span class="marquee__item" aria-hidden="true"><span>🎓</span>Universitarias</span>
+    <span class="marquee__item" aria-hidden="true"><span>☕</span>Librerías-café</span>
+    <span class="marquee__item" aria-hidden="true"><span>🕰️</span>De usados</span>
+    <span class="marquee__item" aria-hidden="true"><span>🎪</span>Ferias y stands</span>
+  </div>
+</section>
+
+<!-- ============================== CÓMO FUNCIONA ============================== -->
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>Del depósito al mostrador, <span class="text-italic text-accent">sin planillas</span></h2>
+      <p>Shoten conecta cada paso de tu librería para que dejes de pasar datos a mano entre el Excel, la caja y los remitos.</p>
+    </div>
+    <div class="steps">
+      <article class="step reveal"><div class="step__num">01</div><h3>Cargás tu catálogo</h3><p>Escaneás el ISBN y Shoten completa título, autor, editorial y tapa. Importás tu planilla actual en minutos.</p></article>
+      <article class="step reveal"><div class="step__num">02</div><h3>Recibís mercadería</h3><p>Ingresás remitos de editoriales y distribuidoras, en firme o en consignación, y el stock se actualiza solo.</p></article>
+      <article class="step reveal"><div class="step__num">03</div><h3>Vendés en segundos</h3><p>Escaneás, cobrás con cualquier medio de pago y el ejemplar se descuenta del stock de esa sucursal.</p></article>
+      <article class="step reveal"><div class="step__num">04</div><h3>Facturás con ARCA</h3><p>Factura electrónica automática en cada venta, sin entrar a otra página ni cargar nada dos veces.</p></article>
+      <article class="step reveal"><div class="step__num">05</div><h3>Liquidás consignaciones</h3><p>Shoten calcula qué vendiste de cada editorial y arma la liquidación y las devoluciones del período.</p></article>
+      <article class="step reveal"><div class="step__num">06</div><h3>Reponés a tiempo</h3><p>Pedidos sugeridos según lo que rota, para no quedarte sin el título que todos piden.</p></article>
+      <article class="step reveal"><div class="step__num">07</div><h3>Controlás desde donde estés</h3><p>Ventas, caja, márgenes y rotación en tiempo real, desde la compu o el celular.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PRODUCTOS ============================== -->
+<section class="section section--white" id="soluciones">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Soluciones</span>
+      <h2>Todo lo que tu librería necesita</h2>
+      <p>Tres módulos que trabajan juntos. Usá lo que necesitás hoy y sumá el resto cuando quieras.</p>
+    </div>
+    <div class="products">
+      <article class="product reveal" id="gestion">
+        <div class="product__art product__art--1"><span class="big">📚</span></div>
+        <div class="product__body">
+          <span class="product__num">01</span>
+          <h3>Tu Gestión</h3>
+          <p>El corazón de tu librería, ordenado.</p>
+          <ul class="bullets">
+            <li><span class="check">✓</span> Catálogo por ISBN con datos y tapas automáticos</li>
+            <li><span class="check">✓</span> Stock en tiempo real por sucursal y ubicación</li>
+            <li><span class="check">✓</span> Formatos, series y colecciones</li>
+            <li><span class="check">✓</span> Listas de precios y actualización masiva</li>
+            <li><span class="check">✓</span> Reportes de ventas, rotación y rentabilidad</li>
+          </ul>
+          <a class="btn btn--primary btn--sm" href="#" data-app="register">Probar gratis</a>
+        </div>
+      </article>
+      <article class="product reveal" id="ventas">
+        <div class="product__art product__art--2"><span class="big">🧾</span></div>
+        <div class="product__body">
+          <span class="product__num">02</span>
+          <h3>Tus Ventas</h3>
+          <p>Un mostrador rápido, para que nadie haga fila.</p>
+          <ul class="bullets">
+            <li><span class="check">✓</span> Punto de venta con lector de código de barras</li>
+            <li><span class="check">✓</span> Todos los medios de pago y cierre de caja</li>
+            <li><span class="check">✓</span> Factura electrónica ARCA integrada</li>
+            <li><span class="check">✓</span> Encargos, señas y cuenta corriente de clientes</li>
+            <li><span class="check">✓</span> Ofertas, descuentos y promociones</li>
+          </ul>
+          <a class="btn btn--primary btn--sm" href="#" data-app="register">Probar gratis</a>
+        </div>
+      </article>
+      <article class="product reveal" id="editoriales">
+        <div class="product__art product__art--3"><span class="big">🤝</span></div>
+        <div class="product__body">
+          <span class="product__num">03</span>
+          <h3>Tus Editoriales</h3>
+          <p>La relación con tus proveedores, sin papeles.</p>
+          <ul class="bullets">
+            <li><span class="check">✓</span> Consignaciones con seguimiento por título</li>
+            <li><span class="check">✓</span> Liquidaciones automáticas por período</li>
+            <li><span class="check">✓</span> Órdenes de compra y pedidos sugeridos</li>
+            <li><span class="check">✓</span> Devoluciones y notas de crédito</li>
+            <li><span class="check">✓</span> Cuentas corrientes con editoriales y distribuidoras</li>
+          </ul>
+          <a class="btn btn--primary btn--sm" href="#" data-app="register">Probar gratis</a>
+        </div>
+      </article>
+    </div>
+    <div class="online-strip reveal" id="online">
+      <span class="online-strip__ico">🛒</span>
+      <div><h3>Tu Tienda Online <span class="badge-new">Pronto</span></h3><p>Publicá tu catálogo en la web con el mismo stock del local. Sin comisiones por venta.</p></div>
+      <a class="btn btn--ghost btn--sm" href="#" data-app="register">Quiero enterarme</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== BENEFICIOS ============================== -->
+<section class="section section--ink">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por qué Shoten</span>
+      <h2>Menos administración, más tiempo para los libros</h2>
+      <p>Lo que cambia en tu librería cuando todo está en un solo lugar.</p>
+    </div>
+    <div class="benefits">
+      <article class="benefit reveal"><div class="benefit__ico">📈</div><h3>Más ventas</h3><p>Nunca más un "no lo tenemos" por no saber qué había en el depósito.</p></article>
+      <article class="benefit reveal"><div class="benefit__ico">🎯</div><h3>Más control</h3><p>Sabés exactamente cuántos ejemplares tenés, dónde están y cuánto valen.</p></article>
+      <article class="benefit reveal"><div class="benefit__ico">🔍</div><h3>Más claridad</h3><p>Qué títulos rotan, cuáles duermen en la estantería y cuánto ganás con cada uno.</p></article>
+      <article class="benefit reveal"><div class="benefit__ico">⚡</div><h3>Más agilidad</h3><p>Ventas en segundos y liquidaciones que antes te llevaban una tarde entera.</p></article>
+      <article class="benefit reveal"><div class="benefit__ico">🌎</div><h3>Más libertad</h3><p>En la nube: entrás desde cualquier lugar, sin servidores ni instalaciones.</p></article>
+      <article class="benefit reveal"><div class="benefit__ico">😌</div><h3>Más tranquilidad</h3><p>Tus datos respaldados y un equipo de soporte que conoce el oficio.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TESTIMONIOS ============================== -->
+<!-- TODO: reemplazar por testimonios reales de clientes antes de publicar. -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Testimonios</span>
+      <h2>Lo que dicen los libreros</h2>
+    </div>
+    <div class="testimonials">
+      <figure class="quote reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>"Antes cerrar las consignaciones del mes me llevaba dos días. Ahora es un clic y le mando la liquidación a cada editorial."</blockquote>
+        <figcaption class="quote__who"><span class="avatar" style="background:var(--accent)">LE</span><span><b>Librería Ejemplo</b><small>Testimonio de muestra</small></span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>"Tenemos dos locales y por fin sabemos qué hay en cada uno sin llamar por teléfono."</blockquote>
+        <figcaption class="quote__who"><span class="avatar" style="background:var(--ink)">LE</span><span><b>Librería Ejemplo</b><small>Testimonio de muestra</small></span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>"Escaneo el ISBN y el libro ya está cargado con tapa y todo. Me cambió la forma de recibir mercadería."</blockquote>
+        <figcaption class="quote__who"><span class="avatar" style="background:var(--green)">LE</span><span><b>Librería Ejemplo</b><small>Testimonio de muestra</small></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== DATOS ============================== -->
+<section class="section section--tight section--white">
+  <div class="container">
+    <div class="stats">
+      <div class="stat reveal"><b data-count="15" data-suffix=" min">15 min</b><span>para empezar a vender</span></div>
+      <div class="stat reveal"><b data-count="0" data-prefix="$ ">$ 0</b><span>de instalación</span></div>
+      <div class="stat reveal"><b data-count="100" data-suffix="%">100%</b><span>en la nube</span></div>
+      <div class="stat reveal"><b>ARCA</b><span>facturación integrada</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TIPOS DE LIBRERÍA ============================== -->
+<section class="section" id="tipos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Para cada librería</span>
+      <h2>Se adapta a la tuya</h2>
+      <p>Chica o grande, de barrio o con varias sucursales: Shoten se configura a tu manera de trabajar.</p>
+    </div>
+    <div class="types">
+      <a class="type reveal" href="#" data-app="register"><div class="type__top"><span class="type__emoji">📖</span><span class="type__num">01</span></div><h3>Librerías independientes</h3><p>Todo lo que necesitás para gestionar tu local sin perder tu identidad.</p><span class="type__link">Crear cuenta →</span></a>
+      <a class="type reveal" href="#" data-app="register"><div class="type__top"><span class="type__emoji">🏬</span><span class="type__num">02</span></div><h3>Cadenas y multi-sucursal</h3><p>Stock, precios y transferencias entre locales, con reportes consolidados.</p><span class="type__link">Crear cuenta →</span></a>
+      <a class="type reveal" href="#" data-app="register"><div class="type__top"><span class="type__emoji">🦸</span><span class="type__num">03</span></div><h3>Comiquerías</h3><p>Series, números, preventas y reservas para tus clientes habituales.</p><span class="type__link">Crear cuenta →</span></a>
+      <a class="type reveal" href="#" data-app="register"><div class="type__top"><span class="type__emoji">🧸</span><span class="type__num">04</span></div><h3>Librerías infantiles</h3><p>Libros, juegos y juguetes en un mismo catálogo, con categorías por edad.</p><span class="type__link">Crear cuenta →</span></a>
+      <a class="type reveal" href="#" data-app="register"><div class="type__top"><span class="type__emoji">🎓</span><span class="type__num">05</span></div><h3>Universitarias y técnicas</h3><p>Picos de demanda por cursada, encargos y listas de bibliografía.</p><span class="type__link">Crear cuenta →</span></a>
+      <a class="type reveal" href="#" data-app="register"><div class="type__top"><span class="type__emoji">☕</span><span class="type__num">06</span></div><h3>Librerías-café</h3><p>Libros y cafetería en la misma caja, con reportes separados por rubro.</p><span class="type__link">Crear cuenta →</span></a>
+      <a class="type reveal" href="#" data-app="register"><div class="type__top"><span class="type__emoji">🕰️</span><span class="type__num">07</span></div><h3>Libros usados y de viejo</h3><p>Ejemplares únicos, estado de conservación y precios por unidad.</p><span class="type__link">Crear cuenta →</span></a>
+      <a class="type reveal" href="#" data-app="register"><div class="type__top"><span class="type__emoji">🎪</span><span class="type__num">08</span></div><h3>Ferias y stands</h3><p>Vendé en la Feria del Libro o en eventos con el mismo stock y la misma caja.</p><span class="type__link">Crear cuenta →</span></a>
+    </div>
+    <p class="types-more">¿Tu librería no está en la lista? <a href="#faq">Contanos cómo trabajás</a></p>
+  </div>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+<section class="section section--white" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>¿Tenés dudas?</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Qué es Shoten?</summary>
+        <p>Shoten es un sistema de gestión en la nube pensado para librerías. Reúne catálogo, stock, punto de venta, facturación electrónica, consignaciones con editoriales y reportes en una sola plataforma.</p>
+      </details>
+      <details>
+        <summary>¿Tiene costo de instalación?</summary>
+        <p>No. Shoten funciona desde el navegador, no hay que instalar nada ni comprar servidores. Solo pagás el plan mensual que elijas.</p>
+      </details>
+      <details>
+        <summary>¿Puedo pasar mi catálogo desde otro sistema o desde Excel?</summary>
+        <p>Sí. Importás tu catálogo y tu stock desde una planilla, y nuestro equipo te acompaña en la migración para que no pierdas información.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tiempo lleva aprender a usarlo?</summary>
+        <p>Muy poco. La mayoría de las librerías vende su primer libro con Shoten el mismo día. Además tenés guías, videos y capacitaciones de la Academia Shoten.</p>
+      </details>
+      <details>
+        <summary>¿Emite factura electrónica de ARCA?</summary>
+        <p>Sí. Shoten emite facturas A, B y C y notas de crédito electrónicas integradas con ARCA en cada venta, sin cargar nada dos veces.</p>
+      </details>
+      <details>
+        <summary>¿Cómo funciona el soporte?</summary>
+        <p>Tenés soporte en vivo por chat y por mail sin costo adicional, con un equipo que conoce cómo trabaja una librería.</p>
+      </details>
+    </div>
+    <div class="faq__more">
+      <a class="btn btn--ghost btn--sm" href="#">Ver todas las preguntas</a>
+      <a class="btn btn--ghost btn--sm" href="#">Centro de Ayuda</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CTA FINAL ============================== -->
+<section class="section">
+  <div class="container">
+    <div class="cta-final reveal">
+      <h2>Probá todo lo que Shoten puede hacer por tu librería</h2>
+      <p>Activá tu cuenta en 15 minutos y empezá a vender hoy mismo.</p>
+      <a class="btn btn--primary" href="#" data-app="register">Empezá gratis</a>
+      <ul class="trust">
+        <li><span class="check">✓</span> Prueba gratuita</li>
+        <li><span class="check">✓</span> Soporte en vivo sin costo</li>
+        <li><span class="check">✓</span> Te acompañamos en la implementación</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer" style="margin-top:0">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="Shoten, inicio">
+          <svg viewBox="0 0 168 40" style="height:34px;width:auto" aria-hidden="true">
+            <path d="M4 10c6-3 11-3 16 0v22c-5-3-10-3-16 0z" fill="#E4572E" stroke="#E4572E" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M36 10c-6-3-11-3-16 0v22c5-3 10-3 16 0z" fill="#FFF7EC" stroke="#FFF7EC" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M24 15h7M24 20h7M24 25h5" stroke="#1B2A4A" stroke-width="1.6" stroke-linecap="round"/>
+            <text x="46" y="28" font-family="Fraunces, Georgia, serif" font-size="25" font-weight="700" fill="currentColor" letter-spacing="-0.5">shoten</text>
+          </svg>
+        </a>
+        <p>El software de gestión para librerías.</p>
+        <div class="footer__contact">
+          <a href="mailto:ventas@shoten.com.ar">ventas@shoten.com.ar</a>
+          <a href="mailto:soporte@shoten.com.ar">soporte@shoten.com.ar</a>
+        </div>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 2c-2.7 0-3 0-4.1.1C4.3 2.3 2.3 4.3 2.1 7.9 2 9 2 9.3 2 12s0 3 .1 4.1c.2 3.6 2.2 5.6 5.8 5.8 1.1.1 1.4.1 4.1.1s3 0 4.1-.1c3.6-.2 5.6-2.2 5.8-5.8.1-1.1.1-1.4.1-4.1s0-3-.1-4.1c-.2-3.6-2.2-5.6-5.8-5.8C15 2 14.7 2 12 2zm0 1.8c2.7 0 3 0 4 .1 2.7.1 4 1.4 4.1 4.1.1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.7-1.4 4-4.1 4.1-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.7-.1-4-1.4-4.1-4.1-.1-1-.1-1.3-.1-4s0-3 .1-4C3.9 5.3 5.3 4 8 3.9c1-.1 1.3-.1 4-.1z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.3c0-.8.2-1.3 1.4-1.3H17V2.2C16.7 2.1 15.8 2 14.8 2 12.6 2 11 3.4 11 5.9V8H8.5v3H11v11h3V11h2.6l.4-3H14z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Nosotros</h4>
+        <ul><li><a href="#">Quiénes somos</a></li><li><a href="#">Trabajá con nosotros</a></li><li><a href="precios.html">Precios</a></li></ul>
+      </div>
+      <div>
+        <h4>Soluciones</h4>
+        <ul><li><a href="index.html#gestion">Tu Gestión</a></li><li><a href="index.html#ventas">Tus Ventas</a></li><li><a href="index.html#editoriales">Tus Editoriales</a></li><li><a href="index.html#online">Tu Tienda Online</a></li></ul>
+      </div>
+      <div>
+        <h4>Librerías</h4>
+        <ul><li><a href="index.html#tipos">Independientes</a></li><li><a href="index.html#tipos">Cadenas</a></li><li><a href="index.html#tipos">Comiquerías</a></li><li><a href="index.html#tipos">Ver todas</a></li></ul>
+      </div>
+      <div>
+        <h4>Soporte</h4>
+        <ul><li><a href="#">Centro de Ayuda</a></li><li><a href="index.html#faq">Preguntas frecuentes</a></li><li><a href="#">Academia Shoten</a></li><li><a href="#">Blog</a></li></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Shoten. Todos los derechos reservados.</span>
+      <nav><a href="#">Políticas de privacidad</a><a href="#">Condiciones de servicio</a>
+        <select class="country" aria-label="País"><option>🇦🇷 Argentina</option></select>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

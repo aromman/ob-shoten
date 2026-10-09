@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 40" role="img" aria-label="Shoten">
+  <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4 10c6-3 11-3 16 0v22c-5-3-10-3-16 0z" fill="#E4572E" stroke="#E4572E" stroke-width="2"/>
+    <path d="M36 10c-6-3-11-3-16 0v22c5-3 10-3 16 0z" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="2"/>
+    <path d="M24 15h7M24 20h7M24 25h5" stroke="#FFF7EC" stroke-width="1.6"/>
+  </g>
+  <text x="46" y="28" font-family="Fraunces, Georgia, serif" font-size="25" font-weight="700" fill="#1B2A4A" letter-spacing="-0.5">shoten</text>
+</svg>
