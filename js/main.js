@@ -5,24 +5,33 @@
   /*
    * URL de la aplicación (fe_shoten). En local ambos proyectos viven en
    * C:\WinNMP\WWW\shoten, por eso la ruta relativa. En producción, mientras
-   * la app no esté publicada, PROD_APP_URL queda vacío y los botones llevan a
-   * la lista de interesados de "Próximamente". Al publicar fe, completar con
-   * el dominio definitivo (p. ej. https://app.shoten.com.ar).
+   * PROD_APP_URL esté vacío, los botones llevan a la lista de interesados de
+   * "Próximamente", salvo los que tengan URL propia en PROD_DIRECT_URLS.
    */
   var LOCAL_APP_URL = '../fe_shoten';
   var PROD_APP_URL = '';
   var WAITLIST_URL = '/';
+  // "Probar gratis" lleva al login: la prueba es la demo, con los usuarios
+  // que muestra login.php.
   var APP_ROUTES = {
     login: '/login.php',
-    register: '/register.php'
+    register: '/login.php'
+  };
+  var PROD_DIRECT_URLS = {
+    register: 'https://app.shoten.com.ar/login.php'
   };
 
   var isLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) || /\.test$/.test(location.hostname);
   var appUrl = isLocal ? LOCAL_APP_URL : PROD_APP_URL;
 
   document.querySelectorAll('[data-app]').forEach(function (el) {
-    var route = APP_ROUTES[el.getAttribute('data-app')];
+    var key = el.getAttribute('data-app');
+    var route = APP_ROUTES[key];
     if (!route) return;
+    if (!isLocal && PROD_DIRECT_URLS[key]) {
+      el.setAttribute('href', PROD_DIRECT_URLS[key]);
+      return;
+    }
     el.setAttribute('href', appUrl ? appUrl + route : WAITLIST_URL);
   });
 

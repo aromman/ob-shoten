@@ -23,13 +23,16 @@ db/suscriptores.sql     Tabla de interesados
 |----------------------------------|-------------------------------------|
 | `shoten.com.ar`                  | "Próximamente" + formulario         |
 | `shoten.com.ar/ob-shoten/`       | Sitio institucional (con noindex)   |
-| `app.shoten.com.ar` *(a futuro)* | Sistema (`fe_shoten`)               |
+| `app.shoten.com.ar`              | Sistema (`fe_shoten`), demo         |
 
 ## Link a la aplicación
 
-Los botones "Probar gratis" e "Iniciar sesión" usan `data-app="register|login"`.
-En local apuntan a `../fe_shoten`. En producción, mientras `PROD_APP_URL` (al inicio de `js/main.js`)
-esté vacío, llevan a la lista de interesados de la raíz. Al publicar fe, completarlo con su dominio.
+Los botones "Probar gratis" e "Iniciar sesión" usan `data-app="register|login"` y los dos
+llevan a `login.php` de fe (la prueba es la demo). En local apuntan a `../fe_shoten`.
+En producción (configurado al inicio de `js/main.js`):
+- "Probar gratis" va a `https://app.shoten.com.ar/login.php` (`PROD_DIRECT_URLS`).
+- "Iniciar sesión" va a la lista de interesados de la raíz mientras `PROD_APP_URL` esté vacío.
+  Al lanzar, completarlo con `https://app.shoten.com.ar`.
 
 ## Despliegue
 
